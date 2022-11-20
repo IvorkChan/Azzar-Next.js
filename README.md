@@ -1,14 +1,16 @@
-# Website with Next.js and Vercel
+# Azzar
 
-This repo contains a rather **stable** version of my personal site [Azzar](http://ivork.me 'Azzar').
+## Built with Next.js and Vercel
 
-Note that many expected features are under development.
+This repo contains a **rather stable** version of my personal site [Azzar](http://ivork.me 'Azzar').
+
+Many expected features are under development.
 
 ## Main Dependencies
 
 - `sass`
 
-- `styled-components` _(will use in the future)_
+- `styled-components`
 
 - `remark` & `remark-html`
 
@@ -16,21 +18,19 @@ Note that many expected features are under development.
 
 ## Structure
 
-Since there are **4 part**s (about, portfolio, blog and my _book/movie/music_ collections) with a lot contents inside each one, I created a top-level folder `/src` outside `/pages`.
+Since there're **4 parts** (about, portfolio, blog and my collections) with many contents inside each, a top-level folder `/src` was created.
 
-So I got:
+- `/components` contains UI snippets.
 
-- `/components` to contain user interface based snippets
+- `/lib` contains functional scripts.
 
-- `/lib` to contain functional scripts
+- `/pages` contains site pages.
 
-- `/pages` to contain main site pages and dynamic pages
+- `/public` contains static resources like fonts and images.
 
-- `/public` to contain static resources like fonts and images
+- `/src` contains drafts and posts. I mainly use `.mdx` file.
 
-- `/src` to contain drafts and data that dynamic pages may need, I mainly use `.mdx` file
-
-- `/styles` to contain theme modules, I mainly use `.scss` file
+- `/styles` contains theme modules, I mainly use `.scss` file.
 
 Refer to official doc of [Next.js](https://nextjs.org/ 'Next.js') for more infomation about other files like `/next.config.cjs` and `/package.json`
 
@@ -40,7 +40,7 @@ I've considered importing libraries like react-spring or Framer Motion, or using
 
 A rough template in `/styles/_vars.scss` states **font and color** globally.
 
-Also please find style for **header and footer** in `/styles/layout.module.scss`.
+Styles for **header and footer** are located in `/styles/layout.module.scss`.
 
 ## 以及
 
@@ -52,4 +52,4 @@ Also please find style for **header and footer** in `/styles/layout.module.scss`
 
 `JavaScript`：只看得懂 var 和 const，分不清三种括号。
 
-DON'T EXPECT HIGH.
+SO DON'T EXPECT HIGH.
