@@ -26,17 +26,17 @@ So I got:
 
 - `/pages` to contain main site pages and dynamic pages
 
-- `/pages` to contain main site pages and dynamic pages
+- `/public` to contain static resources like fonts and images
 
-- `/src` to contain contents that dynamic pages may need, I mainly use `.mdx` file
+- `/src` to contain drafts and data that dynamic pages may need, I mainly use `.mdx` file
 
-- `/styles` to contain theme modules, I mainly use `sass`
+- `/styles` to contain theme modules, I mainly use `.scss` file
 
 Refer to official doc of [Next.js](https://nextjs.org/ 'Next.js') for more infomation about other files like `/next.config.cjs` and `/package.json`
 
 ## Design Part
 
-I 've Considered importing libraries like react-spring or Framer Motion, or using design systems like Ant Design, however decided to stay simple and focus on content.
+I've considered importing libraries like react-spring or Framer Motion, or using design systems like Ant Design, however decided to stay simple and focus on content.
 
 A rough template in `/styles/_vars.scss` states **font and color** globally.
 
@@ -51,3 +51,5 @@ Also please find style for **header and footer** in `/styles/layout.module.scss`
 `CSS`：能改颜色大小透明度，定位只会 margin 和 padding；
 
 `JavaScript`：只看得懂 var 和 const，分不清三种括号。
+
+DON'T EXPECT HIGH.
