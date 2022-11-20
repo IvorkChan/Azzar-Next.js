@@ -1,0 +1,24 @@
+@import '../styles/_vars.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: $color-dark;
+	color: $color-pale;
+	font-family: $font-main;
+	line-height: 1.5;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}

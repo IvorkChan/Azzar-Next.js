@@ -1,0 +1,88 @@
+@import '../styles/_vars.scss';
+
+.main {
+	padding: 8rem 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+.homeSlogan {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - 24rem);
+	min-height: 12rem;
+	font-size: 1.25rem;
+	font-style: italic;
+	letter-spacing: 1.5px;
+	line-height: 2rem;
+}
+
+.homeGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(12rem, 15rem));
+	grid-auto-rows: 8rem;
+	grid-gap: 2.5rem;
+}
+
+.homeCard {
+	border-radius: 1rem;
+	background: $color-mask;
+	transition: all 0.6s;
+}
+
+.homeCardName {
+	cursor: pointer;
+	border-radius: 1rem;
+	border: 1px solid $color-mask;
+	background-color: $color-dark;
+	text-align: center;
+	font-size: 1.125em;
+	letter-spacing: 2px;
+	line-height: 8rem;
+	transition: all 0.2s;
+}
+
+.homeCard:hover .homeCardName {
+	opacity: 0;
+}
+
+.homeCardList {
+	opacity: 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 8rem;
+	top: -8rem;
+	color: $color-pale;
+	font-family: $font-note;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	transition: all 0.8s;
+}
+
+.homeCard:hover .homeCardList {
+	opacity: 1;
+}
+
+@media (max-width: 600px) {
+	.homeGrid {
+		width: calc(100vw - 4rem);
+		grid-template-columns: repeat(1, auto);
+	}
+}
+
+@media (min-width: 1200px) {
+	.homeGrid {
+		width: auto;
+		grid-template-columns: repeat(4, 12rem);
+	}
+}

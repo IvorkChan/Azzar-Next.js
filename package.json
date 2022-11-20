@@ -1,0 +1,32 @@
+{
+	"name": "azzar",
+	"version": "0.2.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "13.0.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-icons": "4.6.0",
+		"react-live-clock": "6.0.7",
+		"sass": "1.56.1",
+		"styled-components": "5.3.6",
+		"date-fns": "2.29.3",
+		"gray-matter": "4.0.3",
+		"remark": "14.0.2",
+		"remark-html": "15.0.1",
+		"@next/mdx": "13.0.4",
+		"@mdx-js/loader": "2.1.5",
+		"@mdx-js/react": "2.1.5"
+	},
+	"devDependencies": {
+		"eslint": "8.26.0",
+		"eslint-config-next": "13.0.0"
+	},
+	"type": "module"
+}
