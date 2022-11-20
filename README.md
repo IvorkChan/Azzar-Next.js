@@ -1,6 +1,6 @@
 # Azzar
 
-## Built with Next.js and Vercel
+**Built with Next.js and Vercel**
 
 This repo contains a **rather stable** version of my personal site [Azzar](http://ivork.me 'Azzar').
 
