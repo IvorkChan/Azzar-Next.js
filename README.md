@@ -32,4 +32,4 @@ Stay simple and focus on content.
 
 `/styles/_vars.scss` states **font and color** globally.
 
-`/styles/layout.module.scss` states style for **header and footer** in every page.
+`/styles/layout.module.scss` states style for **header, footer and navigation bar** in every page.
