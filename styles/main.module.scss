@@ -1,12 +1,15 @@
 @import '../styles/_vars.scss';
 
 .main {
-	padding: 8rem 0;
+	min-height: calc(100vh - 8rem);
+}
+
+.homeMain {
+	min-height: calc(100vh - 8rem);
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 100vh;
 }
 
 .homeSlogan {
@@ -15,7 +18,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: calc(100vh - 24rem);
+	height: calc(100vh - 32rem);
 	min-height: 12rem;
 	font-size: 1.25rem;
 	font-style: italic;
@@ -24,6 +27,7 @@
 }
 
 .homeGrid {
+	margin: 0 0 4rem;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(12rem, 15rem));
 	grid-auto-rows: 8rem;
@@ -33,7 +37,7 @@
 .homeCard {
 	border-radius: 1rem;
 	background: $color-mask;
-	transition: all 0.6s;
+	transition: all 0.8s;
 }
 
 .homeCardName {
@@ -75,14 +79,18 @@
 
 @media (max-width: 600px) {
 	.homeGrid {
+		margin: 0 0 4rem;
 		width: calc(100vw - 4rem);
 		grid-template-columns: repeat(1, auto);
 	}
 }
 
 @media (min-width: 1200px) {
+	.homeSlogan {
+		height: calc(100vh - 24rem);
+	}
 	.homeGrid {
 		width: auto;
-		grid-template-columns: repeat(4, 12rem);
+		grid-template-columns: repeat(4, 15rem);
 	}
 }

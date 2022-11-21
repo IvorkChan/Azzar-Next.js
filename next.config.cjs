@@ -4,6 +4,9 @@ const nextConfig = require('next')({
 });
 module.exports = nextConfig;
 
+const withImages = require('next-images');
+module.exports = withImages();
+
 const withMDX = require('@next/mdx')({
 	extension: /\.mdx?$/,
 	options: {

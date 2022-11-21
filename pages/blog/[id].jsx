@@ -12,12 +12,10 @@ export default function Home({blogData}) {
 			<Head>
 				<title>{blogData.title}</title>
 			</Head>
-			<main>
-				<div>
-					<Date dateString={blogData.date} />
-				</div>
+			<main className={styles.main}>
+				<Date dateString={blogData.date} />
+				<blog dangerouslySetInnerHTML={{__html: blogData.blogHtml}}></blog>
 			</main>
-			<div dangerouslySetInnerHTML={{__html: blogData.blogHtml}} />
 		</Layout>
 	);
 }
