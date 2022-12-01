@@ -1,105 +1,45 @@
 @import '../styles/_vars.scss';
 
+.container {
+	margin: 0 6rem;
+}
+
 .header {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-}
-
-.homeTitle {
-	min-width: 25rem;
-	height: 8rem;
-	display: flex;
-	flex-flow: row, nowrap;
-	background: $color-dark;
-}
-
-.homeBox {
-	position: relative;
-	overflow: hidden;
-	width: 20%;
-	height: 100%;
-	color: $color-pale;
-	font-size: 5rem;
-	font-family: $font-head;
-	transition: all 0.5s;
-}
-
-.homeBox,
-.homeBox:before {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.homeBox:before {
-	content: 'I';
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: $color-pale;
-	color: $color-dark;
-	transition: transform 0.5s;
-	transform: translateY(100%);
-}
-
-.homeBox:nth-child(2):before {
-	content: 'V';
-	transform: translateY(-100%);
-}
-
-.homeBox:nth-child(3):before {
-	content: 'O';
-}
-
-.homeBox:nth-child(4):before {
-	content: 'R';
-	transform: translateY(-100%);
-}
-
-.homeBox:nth-child(5):before {
-	content: 'K';
-}
-
-.homeTitle:hover .homeBox:before {
-	transform: translateY(0);
+	background-color: rgba(245, 245, 245, 0.5);
+	backdrop-filter: blur(10px);
 }
 
 .navbar {
-	padding: 0 2rem;
-	height: 8rem;
+	margin: 0 6rem;
+	height: 4rem;
 	display: grid;
-	grid-template-columns: 1fr auto auto auto auto;
+	grid-template-columns: 1fr auto auto auto;
 	grid-column-gap: 2rem;
 	align-items: center;
-	background-color: $color-dark;
-}
-
-.logo {
-	display: flex;
-	position: relative;
-	height: 4rem;
+	border-bottom: 1px solid $color-mask;
 }
 
 .footer {
-	margin: 0 2rem;
+	margin: 0 6rem;
 	padding: 1rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-top: 1px solid $color-pale;
-	font-family: $font-mono;
-	font-size: 0.75rem;
+	border-top: 1px solid $color-mask;
 }
 
 .icon {
 	display: flex;
-	font-size: 1rem;
+	align-items: center;
 }
 
 .time {
 	display: flex;
+	font-family: $font-mono;
+	font-size: 0.875rem;
 }
 
 .time span {
@@ -107,6 +47,12 @@
 }
 
 @media (max-width: 600px) {
+	.container,
+	.navbar,
+	.footer {
+		margin: 0 2rem;
+	}
+
 	.navbar {
 		grid-column-gap: 1rem;
 	}

@@ -13,54 +13,33 @@ export default function Layout({children, home}) {
 				<link rel='icon' href='/favicon.svg' />
 				<meta name='charset' content='utf-8' />
 				<meta name='author' content='Ivork Chan' />
-				<meta name='description' content='Nothing here.' />
+				<meta name='description' content='nothing' />
 			</Head>
 			<header className={styles.header}>
-				{home ? (
-					<>
-						<div className={styles.homeTitle}>
-							<div className={styles.homeBox}>A</div>
-							<div className={styles.homeBox}>Z</div>
-							<div className={styles.homeBox}>Z</div>
-							<div className={styles.homeBox}>A</div>
-							<div className={styles.homeBox}>R</div>
-						</div>
-					</>
-				) : (
-					<>
-						<nav className={styles.navbar}>
-							<Link href='/' className={styles.logo}>
-								<Image
-									alt='Logo'
-									src='/logo.svg'
-									layout='fill'
-									objectFit='contain'
-									objectPosition='center'
-								/>
+				<>
+					<nav className={styles.navbar}>
+						<li className={styles.menuHome}>
+							<Link href='/' aria-label='home'>
+								azzar
 							</Link>
-							<li className={styles.menu}>
-								<Link href='/info' aria-label='INFO'>
-									INFO
-								</Link>
-							</li>
-							<li className={styles.menu}>
-								<Link href='/work' aria-label='WORK'>
-									WORK
-								</Link>
-							</li>
-							<li className={styles.menu}>
-								<Link href='/blog' aria-label='BLOG'>
-									BLOG
-								</Link>
-							</li>
-							<li className={styles.menu}>
-								<Link href='/list' aria-label='LIST'>
-									LIST
-								</Link>
-							</li>
-						</nav>
-					</>
-				)}
+						</li>
+						<li className={styles.menu}>
+							<Link href='/blog' aria-label='blog'>
+								blog
+							</Link>
+						</li>
+						<li className={styles.menu}>
+							<Link href='/list' aria-label='list'>
+								list
+							</Link>
+						</li>
+						<li className={styles.menu}>
+							<Link href='/info' aria-label='info'>
+								info
+							</Link>
+						</li>
+					</nav>
+				</>
 			</header>
 
 			<main className={styles.container}>{children}</main>
@@ -68,7 +47,7 @@ export default function Layout({children, home}) {
 			<footer className={styles.footer}>
 				{!home && (
 					<span className={styles.icon}>
-						<Link href='/' aria-label='Home'>
+						<Link href='/' aria-label='home'>
 							<AiFillHome />
 						</Link>
 					</span>
@@ -82,7 +61,7 @@ export default function Layout({children, home}) {
 					/>
 				</span>
 				<span className={styles.icon}>
-					<a href='mailto:i@cy.sb' aria-label='Mail'>
+					<a href='mailto:i@cy.sb' aria-label='mail'>
 						<AiFillMail />
 					</a>
 				</span>

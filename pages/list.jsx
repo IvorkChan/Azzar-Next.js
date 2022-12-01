@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import styles from '../styles/main.module.scss';
 
-export const pageTitle = 'info';
+export const pageTitle = 'list';
 
 export default function Home() {
 	return (

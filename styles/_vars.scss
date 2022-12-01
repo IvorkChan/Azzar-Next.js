@@ -1,13 +1,43 @@
-@import 'https://fonts.googleapis.com/css2?family=Codystar&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Inter&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+@font-face {
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url('/fonts/RobotoMono.woff2') format('woff2-variations');
+}
 
-$font-head: Codystar;
-$font-mono: Roboto Mono, Menlo, monospace;
-$font-note: Inter, -apple-system, Segoe UI, Microsoft YaHei, sans-serif;
-$font-main: Lato, -apple-system, Segoe UI, Microsoft YaHei, sans-serif;
+@font-face {
+	font-family: 'Roboto Mono';
+	font-style: italic;
+	font-weight: 100 700;
+	src: url('/fonts/RobotoMono-Italic.woff2') format('woff2-variations');
+}
 
-$color-pale: rgba(215, 220, 220, 1);
-$color-dark: rgba(30, 30, 30, 1);
+@font-face {
+	font-family: 'Vollkorn';
+	font-style: normal;
+	font-weight: 400 900;
+	src: url('/fonts/Vollkorn.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Vollkorn';
+	font-style: italic;
+	font-weight: 400 900;
+	src: url('/fonts/Vollkorn-Italic.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: oblique -10deg 0deg;
+	font-weight: 100 900;
+	src: url('/fonts/Inter.woff2') format('woff2-variations');
+}
+
+$font-mono: Roboto Mono, monospace;
+$font-text: Vollkorn, -apple-system, Georgia, Segoe UI, Microsoft YaHei, serif;
+$font-main: Inter, -apple-system, Segoe UI, Microsoft YaHei, sans-serif;
+
+$color-pale: rgba(245, 245, 245, 1);
+$color-dark: rgba(40, 40, 40, 1);
 $color-mask: rgba(100, 100, 100, 0.1);
+$color-main: MediumBlue;

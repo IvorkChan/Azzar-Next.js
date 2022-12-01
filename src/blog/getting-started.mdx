@@ -1,8 +1,59 @@
 ---
-title: 'Getting Started with Web Design'
-date: '2022-11-18'
+title: 'Getting Started with Web'
+date: '2022-11-20'
+location: 'Chongqing'
 ---
 
-# Switching from Notion / Cargo
+# Getting Started with Web
 
-Few months ago I set up my first website on Cargo.
+This website is built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/) with a focus on simplicity and content.
+
+I've once tried [Cargo](https://cargo.site/) and [Notion](https://www.notion.so/). After comparing many frameworks, I decided to build from scratch.
+
+Source codes can be found [here](https://github.com/IvorkChan/Azzar-Next.js).
+
+## About
+
+### Main Dependencies
+
+- `sass`
+
+- `styled-components`
+
+- `react-icons`
+
+- `remark`
+
+- `remark-html`
+
+### Structure
+
+- `/components` contains UI snippets.
+
+- `/lib` contains functional scripts.
+
+- `/pages` contains site pages.
+
+- `/public` contains static resources like fonts and images.
+
+- `/src` contains drafts and posts. I mainly use `.mdx` file.
+
+- `/styles` contains theme modules, I mainly use `.scss` file.
+
+## Design
+
+### 1. Sitemap
+
+I completed the sitemap draft in Notability.
+
+### 2. Styling
+
+> If you're comfortable with React, you should begin by drawing Lo-Fi and adjusting it. There are numerous Pattern Libraries available for reference. I recommend [Mailchimp](https://ux.mailchimp.com/patterns/color) and [Starbucks](https://www.starbucks.com/developer/pattern-library).
+
+I merely set the global _font_ and _color_, as well as casting the _header_ and _footer_ in this step. Grids, lists, cards, and shadows, amongst other elements, can be enhanced in the future.
+
+One challenge is the navigation between pages, but fortunately the site's structure is simple. Another challenge is responsive design. I've only made simple adjustments for screen width so far.
+
+### 3. Posts
+
+To preserve Markdown compatibility, I merely added basic metadata at the beginning without inserting React components.

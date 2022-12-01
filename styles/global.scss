@@ -8,10 +8,10 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background: $color-dark;
-	color: $color-pale;
 	font-family: $font-main;
 	line-height: 1.5;
+	background-color: $color-pale;
+	color: $color-dark;
 }
 
 a {
