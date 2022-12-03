@@ -5,8 +5,8 @@ import styles from '../styles/main.module.scss';
 
 export const pageTitle = 'blog';
 
-import Date from '../components/date';
 import {getSortedBlogData} from '../lib/post-blog';
+import Date from '../components/date';
 
 export default function Home({allBlogData}) {
 	return (
@@ -18,8 +18,8 @@ export default function Home({allBlogData}) {
 				<bloglist className={styles.blogList}>
 					{allBlogData.map(({id, date, title}) => (
 						<li key={id}>
-							<Date dateString={date} />
 							<Link href={`/blog/${id}`}>{title}</Link>
+							<Date dateString={date} />
 						</li>
 					))}
 				</bloglist>

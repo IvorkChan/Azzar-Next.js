@@ -1,12 +1,11 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import styles from '../styles/main.module.scss';
 
+export const pageTitle = 'azzar';
+
 import Image from 'next/image';
 import homePic from '../public/images/2017-fangshan.jpg';
-
-export const pageTitle = 'azzar';
 
 export default function Home() {
 	return (

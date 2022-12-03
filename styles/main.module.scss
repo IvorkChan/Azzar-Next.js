@@ -1,16 +1,16 @@
 @import '../styles/_vars.scss';
 
 .main {
-	min-height: calc(100vh - 4rem);
+	min-height: calc(100vh - 8rem);
 }
 
-.icon {
+.icon,
+.icon a {
 	display: flex;
-	align-items: center;
 }
 
 .homeMain {
-	min-height: calc(100vh - 4rem);
+	min-height: calc(100vh - 8rem);
 	display: flex;
 	justify-content: space-between;
 }
@@ -26,12 +26,12 @@
 .homePic {
 	margin: 4rem 0;
 	position: relative;
-	width: calc((100vh - 12rem) / 1.5);
-	height: calc(100vh - 12rem);
+	width: calc((100vh - 16rem) / 1.5);
+	height: calc(100vh - 16rem);
 }
 
 .blogList {
-	padding: 4rem 8rem;
+	padding: 4rem 0;
 	display: grid;
 	grid-auto-rows: auto;
 	row-gap: 1rem;
@@ -39,34 +39,30 @@
 
 .blogList li {
 	display: grid;
-	grid-template-columns: 8rem 1fr;
+	grid-template-columns: 1fr 8rem;
 	align-items: baseline;
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.75rem;
 }
 
-.blogList li:hover {
-	background: $color-mask;
+.blogList li a:hover {
+	color: $color-main;
 }
 
 .blogList li time {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
 	font-family: $font-mono;
-	font-size: 0.875rem;
-}
-
-.blogList li a {
-	font-size: 1.125rem;
+	font-size: 0.75rem;
 }
 
 .blogIcon {
-	color: $color-main;
 	font-size: 1.25rem;
 	cursor: pointer;
 }
 
 .blogMain {
-	margin: 4rem calc(50vw - 30rem);
-	min-height: calc(100vh - 4rem);
+	margin: 4rem 0;
+	min-height: calc(100vh - 16rem);
 	padding: 4rem;
 	border: 1px solid $color-main;
 	border-radius: 0.75rem;
@@ -74,17 +70,14 @@
 
 .blogMain h1 {
 	font-size: 2rem;
-	font-weight: 800;
 }
 
 .blogMain h2 {
 	font-size: 1.5rem;
-	font-weight: 700;
 }
 
 .blogMain h3 {
 	font-size: 1.125rem;
-	font-weight: 600;
 }
 
 .blogMain a {
@@ -95,21 +88,20 @@
 	text-decoration: underline;
 }
 
+.blogMain ol,
+.blogMain ul,
 .blogMain blockquote {
-	background: $color-mask;
-	margin: 1rem 0;
-	padding: 0.5rem 1.5rem;
-	border-inline-start: 5px solid $color-mask;
+	margin-inline: 0;
+	padding-inline: 2rem;
 }
 
-.blogMain ol,
-.blogMain ul {
-	margin: 1rem 0;
-	padding-inline-start: 2rem;
+.blogMain blockquote {
+	padding-block: 0.5rem;
+	background: $color-mask;
+	border-radius: 0.5rem;
 }
 
 .blogMain li {
-	margin: 0;
 	list-style: disc;
 }
 
@@ -118,6 +110,7 @@
 }
 
 .blogMain code {
+	word-break: break-word;
 	font-family: $font-mono;
 	font-size: 0.75rem;
 	background-color: $color-mask;
@@ -128,13 +121,17 @@
 .blogSign {
 	margin: 4rem 0 0;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: column;
 	align-items: flex-end;
 	font-family: $font-text;
 	font-style: italic;
 }
 
 @media (max-width: 600px) {
+	.main {
+		min-height: calc(100vh - 4rem);
+	}
+
 	.homeMain {
 		flex-flow: column;
 		justify-content: flex-start;
@@ -145,7 +142,7 @@
 	}
 
 	.homePic {
-		margin: 4rem 0;
+		margin: 2rem 0;
 		width: calc(100vw - 4rem);
 		height: calc(150vw - 6rem);
 	}
@@ -158,12 +155,10 @@
 	.blogList li {
 		display: grid;
 		grid-template-columns: auto;
-		padding: 0;
-		border-radius: 0;
 	}
 
-	.blogList li:hover {
-		background: none;
+	.blogList li time {
+		align-items: flex-start;
 	}
 
 	.blogMain {

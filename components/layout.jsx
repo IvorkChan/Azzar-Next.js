@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from '../styles/layout.module.scss';
 
 import Clock from 'react-live-clock';
@@ -29,11 +28,6 @@ export default function Layout({children, home}) {
 							</Link>
 						</li>
 						<li className={styles.menu}>
-							<Link href='/list' aria-label='list'>
-								list
-							</Link>
-						</li>
-						<li className={styles.menu}>
 							<Link href='/info' aria-label='info'>
 								info
 							</Link>
@@ -41,9 +35,7 @@ export default function Layout({children, home}) {
 					</nav>
 				</>
 			</header>
-
 			<main className={styles.container}>{children}</main>
-
 			<footer className={styles.footer}>
 				{!home && (
 					<span className={styles.icon}>
