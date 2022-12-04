@@ -33,10 +33,6 @@
 	align-items: baseline;
 }
 
-.blogList li a:hover {
-	color: $color-main;
-}
-
 .blogList li time {
 	display: flex;
 	flex-flow: column;
@@ -115,6 +111,41 @@
 	font-size: 0.875rem;
 }
 
+.infoMain {
+	display: flex;
+	flex-flow: column;
+	width: clamp(600px, 50vw, 1200px);
+	font-family: $font-mono;
+	font-size: 0.875rem;
+	font-weight: 350;
+}
+
+.infoNickName {
+	font-size: 2rem;
+	font-weight: 700;
+	box-shadow: inset 0 0 0 0 $color-main;
+	margin: 4rem 0 0;
+	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.infoNickName:hover {
+	color: $color-pale;
+	box-shadow: inset 6rem 0 0 0 $color-main;
+}
+
+.infoRealName {
+	color: $color-pale;
+}
+
+.infoRealName::selection {
+	background: $color-main;
+}
+
+.infoMain ul {
+	margin: 1rem 0;
+	padding: 0;
+}
+
 @media (max-width: 600px) {
 	.homeMain {
 		width: 100%;
@@ -145,5 +176,9 @@
 		width: 100%;
 		border: none;
 		border-radius: 0;
+	}
+
+	.infoMain {
+		width: 100%;
 	}
 }
