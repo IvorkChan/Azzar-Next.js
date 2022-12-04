@@ -1,36 +1,26 @@
 @import '../styles/_vars.scss';
 
-.main {
-	min-height: calc(100vh - 8rem);
-}
-
-.icon,
-.icon a {
-	display: flex;
-}
-
 .homeMain {
-	min-height: calc(100vh - 8rem);
 	display: flex;
-	justify-content: space-between;
+	flex-flow: column;
+	width: clamp(600px, 50vw, 1200px);
 }
 
 .homeSlogan {
 	display: flex;
 	align-items: center;
 	font-family: $font-text;
-	font-size: 1.125rem;
 	height: 4rem;
 }
 
 .homePic {
-	margin: 4rem 0;
 	position: relative;
-	width: calc((100vh - 16rem) / 1.5);
-	height: calc(100vh - 16rem);
+	width: clamp(300px, calc(calc(100vh - 16rem) / 1.5), 600px);
+	height: clamp(450px, calc(100vh - 16rem), 900px);
 }
 
 .blogList {
+	width: clamp(600px, 50vw, 1200px);
 	padding: 4rem 0;
 	display: grid;
 	grid-auto-rows: auto;
@@ -55,17 +45,16 @@
 	font-size: 0.75rem;
 }
 
-.blogIcon {
-	font-size: 1.25rem;
-	cursor: pointer;
-}
-
 .blogMain {
+	width: clamp(600px, 50vw, 1200px);
 	margin: 4rem 0;
-	min-height: calc(100vh - 16rem);
 	padding: 4rem;
 	border: 1px solid $color-main;
 	border-radius: 0.75rem;
+}
+
+.blogIcon {
+	cursor: pointer;
 }
 
 .blogMain h1 {
@@ -123,33 +112,22 @@
 	display: flex;
 	flex-flow: column;
 	align-items: flex-end;
-	font-family: $font-text;
-	font-style: italic;
+	font-size: 0.875rem;
 }
 
 @media (max-width: 600px) {
-	.main {
-		min-height: calc(100vh - 4rem);
-	}
-
 	.homeMain {
-		flex-flow: column;
-		justify-content: flex-start;
-	}
-
-	.homeSlogan {
-		font-size: 1rem;
+		width: 100%;
 	}
 
 	.homePic {
-		margin: 2rem 0;
-		width: calc(100vw - 4rem);
-		height: calc(150vw - 6rem);
+		width: calc(100vw - 2rem);
+		height: calc(150vw - 3rem);
 	}
 
 	.blogList {
-		margin: 2rem 0;
-		padding: 0;
+		width: 100%;
+		padding: 2rem 0;
 	}
 
 	.blogList li {
@@ -162,8 +140,9 @@
 	}
 
 	.blogMain {
-		margin: 1rem 0;
+		margin: 0;
 		padding: 0;
+		width: 100%;
 		border: none;
 		border-radius: 0;
 	}

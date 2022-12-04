@@ -19,6 +19,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: $color-main;
+}
+
 li {
 	list-style: none;
 }

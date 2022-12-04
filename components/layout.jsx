@@ -15,48 +15,47 @@ export default function Layout({children, home}) {
 				<meta name='description' content='nothing' />
 			</Head>
 			<header className={styles.header}>
-				<>
-					<nav className={styles.navbar}>
-						<li className={styles.menuHome}>
-							<Link href='/' aria-label='home'>
-								azzar
-							</Link>
-						</li>
-						<li className={styles.menu}>
-							<Link href='/blog' aria-label='blog'>
-								blog
-							</Link>
-						</li>
-						<li className={styles.menu}>
-							<Link href='/info' aria-label='info'>
-								info
-							</Link>
-						</li>
-					</nav>
-				</>
-			</header>
-			<main className={styles.container}>{children}</main>
-			<footer className={styles.footer}>
-				{!home && (
-					<span className={styles.icon}>
+				<div className={styles.menu}>
+					<li className={styles.menuTag}>
 						<Link href='/' aria-label='home'>
-							<AiFillHome />
+							azzar
 						</Link>
-					</span>
-				)}
-				<span className={styles.time}>
-					<span>Chongqing,</span>
-					<Clock
-						format={'HH:mm:ss'}
-						timezone={'Asia/Chongqing'}
-						ticking={true}
-					/>
-				</span>
-				<span className={styles.icon}>
-					<a href='mailto:i@cy.sb' aria-label='mail'>
-						<AiFillMail />
-					</a>
-				</span>
+					</li>
+					<li className={styles.menuTag}>
+						<Link href='/blog' aria-label='blog'>
+							blog
+						</Link>
+					</li>
+					<li className={styles.menuTag}>
+						<Link href='/info' aria-label='info'>
+							info
+						</Link>
+					</li>
+				</div>
+			</header>
+			<main className={styles.main}>{children}</main>
+			<footer className={styles.footer}>
+				<div className={styles.menu}>
+					{!home && (
+						<li className={styles.icon}>
+							<Link href='/' aria-label='home'>
+								<AiFillHome />
+							</Link>
+						</li>
+					)}
+					<li className={styles.time}>
+						<Clock
+							format={'HH:mm:ss'}
+							timezone={'Asia/Chongqing'}
+							ticking={true}
+						/>
+					</li>
+					<li className={styles.icon}>
+						<a href='mailto:i@cy.sb' aria-label='mail'>
+							<AiFillMail />
+						</a>
+					</li>
+				</div>
 			</footer>
 		</>
 	);

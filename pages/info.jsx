@@ -10,9 +10,7 @@ export default function Home() {
 			<Head>
 				<title>{pageTitle}</title>
 			</Head>
-			<main className={styles.main}>
-				<div>{'WIP'}</div>
-			</main>
+			<div>{'WIP'}</div>
 		</Layout>
 	);
 }

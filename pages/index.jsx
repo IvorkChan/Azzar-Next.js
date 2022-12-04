@@ -13,16 +13,14 @@ export default function Home() {
 			<Head>
 				<title>{pageTitle}</title>
 			</Head>
-			<main className={styles.main}>
-				<div className={styles.homeMain}>
-					<div className={styles.homeSlogan}>
-						Sensibility is the end of sense.
-					</div>
-					<div className={styles.homePic}>
-						<Image src={homePic} alt='Fangshan' fill />
-					</div>
+			<div className={styles.homeMain}>
+				<div className={styles.homeSlogan}>
+					Sensibility is the end of sense.
 				</div>
-			</main>
+				<div className={styles.homePic}>
+					<Image src={homePic} alt='Fangshan' fill />
+				</div>
+			</div>
 		</Layout>
 	);
 }

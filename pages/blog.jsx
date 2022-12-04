@@ -14,16 +14,14 @@ export default function Home({allBlogData}) {
 			<Head>
 				<title>{pageTitle}</title>
 			</Head>
-			<main className={styles.main}>
-				<bloglist className={styles.blogList}>
-					{allBlogData.map(({id, date, title}) => (
-						<li key={id}>
-							<Link href={`/blog/${id}`}>{title}</Link>
-							<Date dateString={date} />
-						</li>
-					))}
-				</bloglist>
-			</main>
+			<div className={styles.blogList}>
+				{allBlogData.map(({id, date, title}) => (
+					<li key={id}>
+						<Link href={`/blog/${id}`}>{title}</Link>
+						<Date dateString={date} />
+					</li>
+				))}
+			</div>
 		</Layout>
 	);
 }

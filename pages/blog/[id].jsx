@@ -13,18 +13,18 @@ export default function Home({blogData}) {
 			<Head>
 				<title>{blogData.title}</title>
 			</Head>
-			<main className={styles.blogMain}>
-				<span className={styles.blogIcon}>
+			<div className={styles.blogMain}>
+				<div className={styles.blogIcon}>
 					<Link href='/blog' aria-label='back'>
 						<AiFillBackward />
 					</Link>
-				</span>
-				<blog dangerouslySetInnerHTML={{__html: blogData.blogHtml}}></blog>
-				<span className={styles.blogSign}>
+				</div>
+				<div dangerouslySetInnerHTML={{__html: blogData.blogHtml}}></div>
+				<div className={styles.blogSign}>
 					<Date dateString={blogData.date} />
 					<span>{blogData.location}</span>
-				</span>
-			</main>
+				</div>
+			</div>
 		</Layout>
 	);
 }
