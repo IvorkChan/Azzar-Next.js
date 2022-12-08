@@ -26,3 +26,8 @@ a:hover {
 li {
 	list-style: none;
 }
+
+::selection {
+	color: $color-pale;
+	background: $color-main;
+}

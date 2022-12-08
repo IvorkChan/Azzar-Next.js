@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from '../styles/layout.module.scss';
+import styles from '../components/layout.module.scss';
 
 import Clock from 'react-live-clock';
 import {AiFillHome, AiFillMail} from 'react-icons/ai';
@@ -22,14 +22,19 @@ export default function Layout({children, home}) {
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
+						<Link href='/info' aria-label='info'>
+							info
+						</Link>
+					</li>
+					<li className={styles.menuTag}>
 						<Link href='/blog' aria-label='blog'>
 							blog
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
-						<Link href='/info' aria-label='info'>
-							info
-						</Link>
+						<a href='https://list.ivork.me' aria-label='list'>
+							list
+						</a>
 					</li>
 				</div>
 			</header>

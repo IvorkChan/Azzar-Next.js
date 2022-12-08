@@ -49,10 +49,6 @@
 	border-radius: 0.75rem;
 }
 
-.blogIcon {
-	cursor: pointer;
-}
-
 .blogMain h1 {
 	font-size: 2rem;
 }
@@ -73,6 +69,23 @@
 	text-decoration: underline;
 }
 
+.blogMain p {
+	font-family: $font-text;
+}
+
+.blogMain code {
+	word-break: break-word;
+	font-family: $font-mono;
+	font-size: 0.75rem;
+	background-color: $color-mask;
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+.blogMain img {
+	max-width: 100%;
+}
+
 .blogMain ol,
 .blogMain ul,
 .blogMain blockquote {
@@ -90,25 +103,17 @@
 	list-style: disc;
 }
 
-.blogMain p {
-	font-family: $font-text;
-}
-
-.blogMain code {
-	word-break: break-word;
-	font-family: $font-mono;
-	font-size: 0.75rem;
-	background-color: $color-mask;
-	padding: 2px 5px;
-	border-radius: 5px;
-}
-
 .blogSign {
 	margin: 4rem 0 0;
 	display: flex;
-	flex-flow: column;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: space-between;
 	font-size: 0.875rem;
+}
+
+.blogIcon {
+	font-size: 1rem;
+	cursor: pointer;
 }
 
 .infoMain {
@@ -123,14 +128,6 @@
 .infoNickName {
 	font-size: 2rem;
 	font-weight: 700;
-	box-shadow: inset 0 0 0 0 $color-main;
-	margin: 4rem 0 0;
-	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.infoNickName:hover {
-	color: $color-pale;
-	box-shadow: inset 6rem 0 0 0 $color-main;
 }
 
 .infoRealName {
@@ -180,5 +177,9 @@
 
 	.infoMain {
 		width: 100%;
+	}
+
+	.infoNickName {
+		margin: 2rem 0 0;
 	}
 }

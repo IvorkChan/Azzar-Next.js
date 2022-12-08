@@ -14,15 +14,12 @@ export default function Home({blogData}) {
 				<title>{blogData.title}</title>
 			</Head>
 			<div className={styles.blogMain}>
-				<div className={styles.blogIcon}>
-					<Link href='/blog' aria-label='back'>
-						<AiFillBackward />
-					</Link>
-				</div>
 				<div dangerouslySetInnerHTML={{__html: blogData.blogHtml}}></div>
 				<div className={styles.blogSign}>
+					<Link href='/blog' aria-label='back' className={styles.blogIcon}>
+						<AiFillBackward />
+					</Link>
 					<Date dateString={blogData.date} />
-					<span>{blogData.location}</span>
 				</div>
 			</div>
 		</Layout>

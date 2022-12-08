@@ -24,7 +24,7 @@
 	width: clamp(600px, 50vw, 1200px);
 	height: 8rem;
 	display: grid;
-	grid-template-columns: 1fr auto auto;
+	grid-template-columns: 1fr auto auto auto;
 	grid-column-gap: 2rem;
 	align-items: center;
 }
@@ -50,8 +50,8 @@
 
 @media (max-width: 600px) {
 	.main {
-		margin: 2rem 1rem;
-		min-height: calc(100vh - 4rem);
+		padding: 2rem 1rem;
+		min-height: calc(100vh - 8rem);
 	}
 
 	.header .menu,

@@ -5,7 +5,7 @@ import styles from '../styles/main.module.scss';
 export const pageTitle = 'azzar';
 
 import Image from 'next/image';
-import homePic from '../public/images/2017-fangshan.jpg';
+import homePic from '../public/images/2017-Fangshan.jpg';
 
 export default function Home() {
 	return (

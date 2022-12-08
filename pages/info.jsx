@@ -14,35 +14,73 @@ export default function Home() {
 				<div className={styles.infoNickName}>Ivork</div>
 				<div className={styles.infoRealName}>Yue CHENG</div>
 				<ul className={styles.infoPersonal}>
-					<li># about me</li>
+					<li>#</li>
 					<li>Mandarin / English / German</li>
 					<li>China</li>
 				</ul>
 				<ul className={styles.infoInterest}>
-					<li># i love</li>
+					<li>#</li>
 					<li>cat</li>
 					<li>design</li>
 					<li>tech</li>
 					<li>indie game</li>
 				</ul>
 				<ul className={styles.infoProfession}>
-					<li># professional experiences</li>
-					<li>21-22, Research Associate at CQU</li>
-					<li>15-19, BE in Industrial Design at TJU</li>
+					<li>#</li>
+					<li>
+						{'21-22, Research Associate at '}
+						<a href='https://www.cqu.edu.cn/' target='_blank' rel='noreferrer'>
+							CQU
+						</a>
+					</li>
+					<li>
+						{'15-19, BE in Industrial Design at '}
+						<a
+							href='https://www.tongji.edu.cn/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							TJU
+						</a>
+					</li>
 				</ul>
 				<ul className={styles.infoSocial}>
-					<li># find me</li>
+					<li>#</li>
 					<li>
-						<a href='https://twitter.com/ivorkchan'>Twitter</a>
+						<a
+							href='https://twitter.com/ivorkchan'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Twitter
+						</a>
 					</li>
 					<li>
-						<a href='https://www.instagram.com/ivorkchan'>Instagram</a>
+						<a
+							href='https://www.instagram.com/ivorkchan'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Instagram
+						</a>
 					</li>
 					<li>
-						<a href='https://github.com/ivorkchan'>GitHub</a>
+						<a
+							href='https://github.com/ivorkchan'
+							target='_blank'
+							rel='noreferrer'
+						>
+							GitHub
+						</a>
 					</li>
 					<li>
-						<a href='https://steamcommunity.com/id/ivorkchan'>Steam</a>
+						<a
+							href='https://steamcommunity.com/id/ivorkchan'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Steam
+						</a>
 					</li>
 				</ul>
 			</div>
