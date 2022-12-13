@@ -1,18 +1,20 @@
-# Azzar
+# azzar
 
-**Built with Next.js and Vercel.**
-
-This repo contains a **rather stable** version of my personal site [Azzar](http://ivork.me 'Azzar'). Many expected features are under development.
+This repo contains a **rather stable** version of my personal site.
 
 ## Main Dependencies
 
-- `sass` & `styled-components` & `react-icons`
+- `sass`
 
-- `remark` & `remark-html`
+- `styled-components`
+
+- `react-icons`
+
+- `remark`
 
 ## Structure
 
-A top-level folder `/src` was created to have all contents needed in 4 main pages (about, portfolio, blog and my collections).
+A top-level folder `/src` was created to have all contents.
 
 - `/components` contains UI snippets.
 
@@ -22,9 +24,9 @@ A top-level folder `/src` was created to have all contents needed in 4 main page
 
 - `/public` contains static resources like fonts and images.
 
-- `/src` contains drafts and posts. I mainly use `.mdx` file.
+- `/src` contains drafts and posts.
 
-- `/styles` contains theme modules, I mainly use `.scss` file.
+- `/styles` contains theme modules.
 
 ## Design
 
