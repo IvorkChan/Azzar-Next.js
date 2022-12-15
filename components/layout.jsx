@@ -3,9 +3,9 @@ import Link from 'next/link';
 import styles from '../components/layout.module.scss';
 
 import Clock from 'react-live-clock';
-import {AiFillHome, AiFillMail} from 'react-icons/ai';
+import { AiFillHome, AiFillMail } from 'react-icons/ai';
 
-export default function Layout({children, home}) {
+export default function Layout({ children, home }) {
 	return (
 		<>
 			<Head>
@@ -32,9 +32,9 @@ export default function Layout({children, home}) {
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
-						<a href='https://list.ivork.me' aria-label='list'>
+						<Link href='/list' aria-label='list'>
 							list
-						</a>
+						</Link>
 					</li>
 				</div>
 			</header>

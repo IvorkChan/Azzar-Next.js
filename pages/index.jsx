@@ -15,7 +15,7 @@ export default function Home() {
 			</Head>
 			<div className={styles.homeMain}>
 				<div className={styles.homeSlogan}>
-					Sensibility is the end of sense.
+					{'Sensibility is the end of sense.'}
 				</div>
 				<div className={styles.homePic}>
 					<Image src={homePic} alt='Fangshan' fill />

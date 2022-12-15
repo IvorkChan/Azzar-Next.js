@@ -4,22 +4,22 @@ import Layout from '../../components/layout';
 import styles from '../../styles/main.module.scss';
 
 import { AiFillBackward } from 'react-icons/ai';
-import { getBlogId, getBlogData } from '../../lib/post-blog';
+import { getListId, getListData } from '../../lib/post-list';
 import Date from '../../components/date';
 
-export default function Home({ blogData }) {
+export default function Home({ listData }) {
 	return (
 		<Layout>
 			<Head>
-				<title>{blogData.title}</title>
+				<title>{listData.title}</title>
 			</Head>
 			<div className={styles.articleMain}>
-				<div dangerouslySetInnerHTML={{ __html: blogData.blogHtml }}></div>
+				<div dangerouslySetInnerHTML={{ __html: listData.listHtml }}></div>
 				<div className={styles.articleSign}>
-					<Link href='/blog' aria-label='back' className={styles.articleIcon}>
+					<Link href='/list' aria-label='back' className={styles.articleIcon}>
 						<AiFillBackward />
 					</Link>
-					<Date dateString={blogData.date} />
+					<Date dateString={listData.date} />
 				</div>
 			</div>
 		</Layout>
@@ -27,7 +27,7 @@ export default function Home({ blogData }) {
 }
 
 export async function getStaticPaths() {
-	const paths = getBlogId();
+	const paths = getListId();
 	return {
 		paths,
 		fallback: false,
@@ -35,10 +35,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const blogData = await getBlogData(params.id);
+	const listData = await getListData(params.id);
 	return {
 		props: {
-			blogData,
+			listData,
 		},
 	};
 }

@@ -33,9 +33,23 @@
 	src: url('/fonts/Inter.woff2') format('woff2-variations');
 }
 
+@font-face {
+	font-family: 'HY XinRenWenSong';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/HYXinRenWenSong55W.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'HY XinRenWenSong';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/HYXinRenWenSong75W.woff2') format('woff2');
+}
+
 $font-mono: Roboto Mono, monospace;
-$font-text: Vollkorn, -apple-system, Georgia, Segoe UI, Microsoft YaHei, serif;
-$font-main: Inter, -apple-system, Segoe UI, Microsoft YaHei, sans-serif;
+$font-text: Vollkorn, 'HY XinRenWenSong', serif;
+$font-main: Inter, 'HY XinRenWenSong', sans-serif;
 
 $color-pale: rgba(240, 240, 240, 1);
 $color-dark: rgba(60, 60, 60, 1);

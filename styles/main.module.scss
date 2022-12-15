@@ -19,103 +19,6 @@
 	height: clamp(450px, calc(100vh - 16rem), 900px);
 }
 
-.blogList {
-	width: clamp(600px, 50vw, 1200px);
-	padding: 4rem 0;
-	display: grid;
-	grid-auto-rows: auto;
-	row-gap: 1rem;
-}
-
-.blogList li {
-	display: grid;
-	grid-template-columns: 1fr 8rem;
-	align-items: baseline;
-}
-
-.blogList li time {
-	display: flex;
-	flex-flow: column;
-	align-items: flex-end;
-	font-family: $font-mono;
-	font-size: 0.75rem;
-}
-
-.blogMain {
-	width: clamp(600px, 50vw, 1200px);
-	margin: 4rem 0;
-	padding: 4rem;
-	border: 1px solid $color-main;
-	border-radius: 0.75rem;
-}
-
-.blogMain h1 {
-	font-size: 2rem;
-}
-
-.blogMain h2 {
-	font-size: 1.5rem;
-}
-
-.blogMain h3 {
-	font-size: 1.125rem;
-}
-
-.blogMain a {
-	color: $color-main;
-}
-
-.blogMain a:hover {
-	text-decoration: underline;
-}
-
-.blogMain p {
-	font-family: $font-text;
-}
-
-.blogMain code {
-	word-break: break-word;
-	font-family: $font-mono;
-	font-size: 0.75rem;
-	background-color: $color-mask;
-	padding: 2px 5px;
-	border-radius: 5px;
-}
-
-.blogMain img {
-	max-width: 100%;
-}
-
-.blogMain ol,
-.blogMain ul,
-.blogMain blockquote {
-	margin-inline: 0;
-	padding-inline: 2rem;
-}
-
-.blogMain blockquote {
-	padding-block: 0.5rem;
-	background: $color-mask;
-	border-radius: 0.5rem;
-}
-
-.blogMain li {
-	list-style: disc;
-}
-
-.blogSign {
-	margin: 4rem 0 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 0.875rem;
-}
-
-.blogIcon {
-	font-size: 1rem;
-	cursor: pointer;
-}
-
 .infoMain {
 	display: flex;
 	flex-flow: column;
@@ -126,6 +29,7 @@
 }
 
 .infoNickName {
+	margin-top: 2rem;
 	font-size: 2rem;
 	font-weight: 700;
 }
@@ -143,43 +47,177 @@
 	padding: 0;
 }
 
+.listIntro {
+	margin-top: 4rem;
+	width: clamp(600px, 50vw, 1200px);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+}
+
+.listCard {
+	display: flex;
+	flex-flow: column;
+	font-family: $font-mono;
+	font-size: 0.875rem;
+	font-weight: 350;
+	border: 1px solid $color-main;
+	padding: 1rem 2rem;
+	box-sizing: border-box;
+}
+
+.listCard span {
+	font-weight: 700;
+}
+
+.listCard ul {
+	margin-block: 0;
+	padding-inline: 0;
+}
+
+.postList {
+	width: clamp(600px, 50vw, 1200px);
+	padding: 4rem 0;
+	display: grid;
+	grid-auto-rows: auto;
+	row-gap: 1rem;
+}
+
+.postList li {
+	display: grid;
+	grid-template-columns: 1fr 8rem;
+	align-items: baseline;
+}
+
+.postList li time {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+	font-family: $font-mono;
+	font-size: 0.75rem;
+}
+
+.articleMain {
+	width: clamp(600px, 50vw, 1200px);
+	margin: 4rem 0;
+	padding: 4rem;
+	border-radius: 1rem;
+	background: rgb(250, 250, 250);
+	box-shadow: 0px 0px 5px rgb(0 0 0 / 10%), 0px 5px 10px rgb(0 0 0 / 10%);
+}
+
+.articleMain h1 {
+	font-size: 2rem;
+}
+
+.articleMain h2 {
+	font-size: 1.5rem;
+}
+
+.articleMain h3 {
+	font-size: 1.125rem;
+}
+
+.articleMain a {
+	color: $color-main;
+}
+
+.articleMain a:hover {
+	text-decoration: underline;
+}
+
+.articleMain p {
+	font-family: $font-text;
+}
+
+.articleMain code {
+	word-break: break-word;
+	font-family: $font-mono;
+	font-size: 0.75rem;
+	background-color: $color-mask;
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+.articleMain img {
+	max-width: 100%;
+}
+
+.articleMain ol,
+.articleMain ul,
+.articleMain blockquote {
+	margin-inline: 0;
+	padding-inline: 1rem;
+}
+
+.articleMain blockquote {
+	padding-block: 0.5rem;
+	background: $color-mask;
+	border-radius: 0.5rem;
+}
+
+.articleMain li {
+	list-style: disc;
+}
+
+.articleSign {
+	margin: 4rem 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.875rem;
+}
+
+.articleIcon {
+	font-size: 1rem;
+	cursor: pointer;
+}
+
 @media (max-width: 600px) {
 	.homeMain {
 		width: 100%;
 	}
 
 	.homePic {
-		width: calc(100vw - 2rem);
-		height: calc(150vw - 3rem);
-	}
-
-	.blogList {
-		width: 100%;
-		padding: 2rem 0;
-	}
-
-	.blogList li {
-		display: grid;
-		grid-template-columns: auto;
-	}
-
-	.blogList li time {
-		align-items: flex-start;
-	}
-
-	.blogMain {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		border: none;
-		border-radius: 0;
+		width: calc(100vw - 3rem);
+		height: calc(150vw - 4.5rem);
 	}
 
 	.infoMain {
 		width: 100%;
 	}
 
-	.infoNickName {
-		margin: 2rem 0 0;
+	.listIntro {
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		row-gap: 2rem;
+	}
+
+	.listCard {
+		padding: 1rem;
+	}
+
+	.postList {
+		width: 100%;
+		padding: 2rem 0;
+	}
+
+	.postList li {
+		display: grid;
+		grid-template-columns: auto;
+	}
+
+	.postList li time {
+		align-items: flex-start;
+	}
+
+	.articleMain {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		border-radius: 0;
+		background: none;
+		box-shadow: none;
 	}
 }
