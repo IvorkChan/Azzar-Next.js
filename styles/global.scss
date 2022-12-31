@@ -31,3 +31,13 @@ li {
 	color: $color-pale;
 	background: $color-main;
 }
+
+::-webkit-scrollbar {
+	height: 10px;
+	background: $color-mask;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: $color-mask;
+}

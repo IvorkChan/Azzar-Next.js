@@ -18,50 +18,56 @@ export default function Home() {
 					<li>China</li>
 				</ul>
 				<ul className={styles.infoInterest}>
-					<li>cat</li>
-					<li>design</li>
-					<li>tech</li>
-					<li>indie game</li>
+					<li>Cat</li>
+					<li>Design</li>
+					<li>Tech</li>
+					<li>Indie Game</li>
 				</ul>
 				<ul className={styles.infoProfession}>
-					<li>{'21-22, Research Associate at Chongqing University'}</li>
-					<li>{'15-19, BE in Industrial Design at Tongji University'}</li>
+					<li>2021-2022</li>
+					<li>Research Associate at Chongqing University</li>
+					<li>2015-2019</li>
+					<li>BE in Industrial Design at Tongji University</li>
 				</ul>
 				<ul className={styles.infoSocial}>
 					<li>
+						Twitter
 						<a
 							href='https://twitter.com/ivorkchan'
 							target='_blank'
 							rel='noreferrer'
 						>
-							Twitter
+							🡭
 						</a>
 					</li>
 					<li>
+						Instagram
 						<a
 							href='https://www.instagram.com/ivorkchan'
 							target='_blank'
 							rel='noreferrer'
 						>
-							Instagram
+							🡭
 						</a>
 					</li>
 					<li>
+						GitHub
 						<a
 							href='https://github.com/ivorkchan'
 							target='_blank'
 							rel='noreferrer'
 						>
-							GitHub
+							🡭
 						</a>
 					</li>
 					<li>
+						Steam
 						<a
 							href='https://steamcommunity.com/id/ivorkchan'
 							target='_blank'
 							rel='noreferrer'
 						>
-							Steam
+							🡭
 						</a>
 					</li>
 				</ul>

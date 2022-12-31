@@ -9,7 +9,6 @@
 .homeSlogan {
 	display: flex;
 	align-items: center;
-	font-family: $font-text;
 	height: 4rem;
 }
 
@@ -23,9 +22,6 @@
 	display: flex;
 	flex-flow: column;
 	width: clamp(600px, 50vw, 1200px);
-	font-family: $font-mono;
-	font-size: 0.875rem;
-	font-weight: 350;
 }
 
 .infoNickName {
@@ -47,6 +43,15 @@
 	padding: 0;
 }
 
+.infoSocial li a {
+	color: $color-main;
+	margin-left: 0.25rem;
+}
+
+.infoSocial li a:hover {
+	text-decoration: underline;
+}
+
 .listIntro {
 	margin-top: 4rem;
 	width: clamp(600px, 50vw, 1200px);
@@ -58,21 +63,27 @@
 .listCard {
 	display: flex;
 	flex-flow: column;
-	font-family: $font-mono;
-	font-size: 0.875rem;
-	font-weight: 350;
 	border: 1px solid $color-main;
 	padding: 1rem 2rem;
 	box-sizing: border-box;
 }
 
 .listCard span {
-	font-weight: 700;
+	color: $color-main;
 }
 
 .listCard ul {
 	margin-block: 0;
 	padding-inline: 0;
+}
+
+.listLink li a {
+	color: $color-main;
+	margin-left: 0.25rem;
+}
+
+.listLink li a:hover {
+	text-decoration: underline;
 }
 
 .postList {
@@ -101,13 +112,12 @@
 	width: clamp(600px, 50vw, 1200px);
 	margin: 4rem 0;
 	padding: 4rem;
-	border-radius: 1rem;
-	background: rgb(250, 250, 250);
-	box-shadow: 0px 0px 5px rgb(0 0 0 / 10%), 0px 5px 10px rgb(0 0 0 / 10%);
+	border: 1px solid $color-main;
 }
 
 .articleMain h1 {
 	font-size: 2rem;
+	font-family: $font-text;
 }
 
 .articleMain h2 {
@@ -126,21 +136,35 @@
 	text-decoration: underline;
 }
 
-.articleMain p {
-	font-family: $font-text;
+.articleMain pre {
+	overflow: auto;
+	background: $color-mask;
+	padding: 0.5rem 1rem;
+}
+
+.articleMain pre code {
+	position: inherit;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: none;
 }
 
 .articleMain code {
-	word-break: break-word;
+	position: relative;
+	word-break: break-all;
 	font-family: $font-mono;
 	font-size: 0.75rem;
-	background-color: $color-mask;
-	padding: 2px 5px;
-	border-radius: 5px;
+	background: rgba(50, 100, 150, 0.1);
+	margin: 0 2px;
+	padding: 2px 4px;
+	border-radius: 4px;
 }
 
 .articleMain img {
 	max-width: 100%;
+	max-height: 480px;
 }
 
 .articleMain ol,
@@ -216,8 +240,10 @@
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		border-radius: 0;
-		background: none;
-		box-shadow: none;
+		border: none;
+	}
+
+	.articleMain img {
+		max-height: 100%;
 	}
 }

@@ -16,7 +16,7 @@ export default function Home({ allListData }) {
 			</Head>
 			<div className={styles.listIntro}>
 				<div className={styles.listCard}>
-					<span>records / favorites</span>
+					<span>Records / Favorites</span>
 					<ul className={styles.listCategories}>
 						<li>read</li>
 						<li>listen</li>
@@ -25,33 +25,36 @@ export default function Home({ allListData }) {
 					</ul>
 				</div>
 				<div className={styles.listCard}>
-					<span>more</span>
+					<span>More</span>
 					<ul className={styles.listLink}>
 						<li>
+							NeoDB
 							<a
 								href='https://neodb.social/users/Ivork@mastodon.social/'
 								target='_blank'
 								rel='noreferrer'
 							>
-								NeoDB
+								🡭
 							</a>
 						</li>
 						<li>
+							Are.na
 							<a
 								href='https://www.are.na/ivork-chan/'
 								target='_blank'
 								rel='noreferrer'
 							>
-								Are.na
+								🡭
 							</a>
 						</li>
 						<li>
+							{'ʕ •ᴥ•ʔ'}
 							<a
 								href='https://ivork.notion.site/'
 								target='_blank'
 								rel='noreferrer'
 							>
-								singing
+								🡭
 							</a>
 						</li>
 					</ul>
