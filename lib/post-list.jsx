@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkPrism from 'remark-prism';
 
 const listDir = path.join(process.cwd(), 'src/list');
 
@@ -42,7 +43,10 @@ export async function getListData(id) {
 	const listPath = path.join(listDir, `${id}.mdx`);
 	const listContent = fs.readFileSync(listPath, 'utf8');
 	const listMatter = matter(listContent);
-	const listHtmlRaw = await remark().use(html).process(listMatter.content);
+	const listHtmlRaw = await remark()
+		.use(html, { sanitize: false })
+		.use(remarkPrism, { plugins: ['line-numbers'] })
+		.process(listMatter.content);
 	const listHtml = listHtmlRaw.toString();
 	return {
 		id,

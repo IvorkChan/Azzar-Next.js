@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkPrism from 'remark-prism';
 
 const blogDir = path.join(process.cwd(), 'src/blog');
 
@@ -42,7 +43,10 @@ export async function getBlogData(id) {
 	const blogPath = path.join(blogDir, `${id}.mdx`);
 	const blogContent = fs.readFileSync(blogPath, 'utf8');
 	const blogMatter = matter(blogContent);
-	const blogHtmlRaw = await remark().use(html).process(blogMatter.content);
+	const blogHtmlRaw = await remark()
+		.use(html, { sanitize: false })
+		.use(remarkPrism, { plugins: ['line-numbers'] })
+		.process(blogMatter.content);
 	const blogHtml = blogHtmlRaw.toString();
 	return {
 		id,

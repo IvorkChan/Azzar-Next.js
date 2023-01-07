@@ -30,3 +30,27 @@ One challenge is the navigation between pages. Another one is responsive design.
 ### 3. Posts
 
 To preserve Markdown compatibility, I merely added basic metadata at the beginning without inserting React components.
+
+### 4. Syntax Highlighting
+
+I chose `Prism.js`. And for this project, I use the plugin `remark-prism`.
+
+Example:
+
+```js
+export async function getListData(id) {
+	const listPath = path.join(listDir, `${id}.mdx`);
+	const listContent = fs.readFileSync(listPath, 'utf8');
+	const listMatter = matter(listContent);
+	const listHtmlRaw = await remark()
+		.use(html, { sanitize: false })
+		.use(remarkPrism, { plugins: ['line-numbers'] })
+		.process(listMatter.content);
+	const listHtml = listHtmlRaw.toString();
+	return {
+		id,
+		...listMatter.data,
+		listHtml,
+	};
+}
+```
