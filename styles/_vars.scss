@@ -1,4 +1,12 @@
 @font-face {
+	font-family: 'Noto Sans Symbols';
+	font-style: normal;
+	font-weight: 400;
+	unicode-range: U+1F800-1F8FF;
+	src: url('/fonts/NotoSansSymbols.woff2') format('woff2');
+}
+
+@font-face {
 	font-family: 'Roboto Mono';
 	font-style: normal;
 	font-weight: 100 700;
@@ -33,19 +41,12 @@
 	src: url('/fonts/Inter.woff2') format('woff2-variations');
 }
 
-@font-face {
-	font-family: 'Noto Sans Symbols';
-	font-style: normal;
-	font-weight: 400;
-	unicode-range: U+1F800-1F8FF;
-	src: url('/fonts/NotoSansSymbols.woff2') format('woff2');
-}
-
 $font-mono: 'Noto Sans Symbols', 'Roboto Mono', monospace;
 $font-text: 'Noto Sans Symbols', 'Vollkorn', serif;
 $font-main: 'Noto Sans Symbols', 'Inter', sans-serif;
 
 $color-pale: rgba(250, 250, 250, 1);
-$color-dark: rgba(80, 80, 80, 1);
+$color-dark: rgba(100, 100, 100, 1);
+$color-grey: rgba(120, 120, 120, 1);
 $color-mask: rgba(120, 120, 120, 0.1);
 $color-main: rgba(50, 100, 150, 1);

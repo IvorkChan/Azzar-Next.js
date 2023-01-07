@@ -1,20 +1,12 @@
 # azzar
 
-This repo contains a **rather stable** version of my personal site.
+This repo contains a rather stable version of my personal site.
 
 ## Main Dependencies
 
 - `sass`
 
-- `styled-components`
-
-- `react-icons`
-
-- `remark`
-
 ## Structure
-
-A top-level folder `/src` was created to have all contents.
 
 - `/components` contains UI snippets.
 

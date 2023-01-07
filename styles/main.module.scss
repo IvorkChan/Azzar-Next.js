@@ -6,16 +6,11 @@
 	width: clamp(600px, 50vw, 1200px);
 }
 
-.homeSlogan {
-	display: flex;
-	align-items: center;
-	height: 4rem;
-}
-
 .homePic {
 	position: relative;
 	width: clamp(300px, calc(calc(100vh - 16rem) / 1.5), 600px);
 	height: clamp(450px, calc(100vh - 16rem), 900px);
+	margin: 4rem 0;
 }
 
 .infoMain {
@@ -26,30 +21,23 @@
 
 .infoNickName {
 	margin-top: 2rem;
-	font-size: 2rem;
-	font-weight: 700;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 .infoRealName {
 	color: $color-pale;
+	margin-bottom: 1rem;
 }
 
 .infoRealName::selection {
 	background: $color-main;
 }
 
-.infoMain ul {
+.infoPersonal,
+.infoInterest,
+.infoSocial {
 	margin: 1rem 0;
-	padding: 0;
-}
-
-.infoSocial li a {
-	color: $color-main;
-	margin-left: 0.25rem;
-}
-
-.infoSocial li a:hover {
-	text-decoration: underline;
 }
 
 .listIntro {
@@ -66,24 +54,12 @@
 	border: 1px solid $color-main;
 	padding: 1rem 2rem;
 	box-sizing: border-box;
+	font-size: 0.875rem;
 }
 
 .listCard span {
 	color: $color-main;
-}
-
-.listCard ul {
-	margin-block: 0;
-	padding-inline: 0;
-}
-
-.listLink li a {
-	color: $color-main;
-	margin-left: 0.25rem;
-}
-
-.listLink li a:hover {
-	text-decoration: underline;
+	font-size: 1rem;
 }
 
 .postList {
@@ -106,6 +82,7 @@
 	align-items: flex-end;
 	font-family: $font-mono;
 	font-size: 0.75rem;
+	color: $color-grey;
 }
 
 .articleMain {
@@ -134,32 +111,8 @@
 
 .articleMain a:hover {
 	text-decoration: underline;
-}
-
-.articleMain pre {
-	overflow: auto;
-	background: $color-mask;
-	padding: 0.5rem 1rem;
-}
-
-.articleMain pre code {
-	position: inherit;
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: none;
-}
-
-.articleMain code {
-	position: relative;
-	word-break: break-all;
-	font-family: $font-mono;
-	font-size: 0.75rem;
-	background: rgba(50, 100, 150, 0.1);
-	margin: 0 2px;
-	padding: 2px 4px;
-	border-radius: 4px;
+	text-underline-position: from-font;
+	text-decoration-thickness: from-font;
 }
 
 .articleMain img {
@@ -167,21 +120,10 @@
 	max-height: 480px;
 }
 
-.articleMain ol,
-.articleMain ul,
 .articleMain blockquote {
-	margin-inline: 0;
-	padding-inline: 1rem;
-}
-
-.articleMain blockquote {
-	padding-block: 0.5rem;
-	background: $color-mask;
-	border-radius: 0.5rem;
-}
-
-.articleMain li {
-	list-style: disc;
+	border-left: 0.25rem solid $color-mask;
+	font-size: 0.875rem;
+	color: $color-grey;
 }
 
 .articleSign {
@@ -205,6 +147,7 @@
 	.homePic {
 		width: calc(100vw - 3rem);
 		height: calc(150vw - 4.5rem);
+		margin: 2rem 0;
 	}
 
 	.infoMain {
@@ -241,6 +184,7 @@
 		padding: 0;
 		width: 100%;
 		border: none;
+		font-size: 17px;
 	}
 
 	.articleMain img {

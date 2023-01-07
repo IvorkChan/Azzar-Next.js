@@ -23,6 +23,13 @@ a:hover {
 	color: $color-main;
 }
 
+ol,
+ul,
+blockquote {
+	margin: 1rem 0;
+	padding: 0 1rem;
+}
+
 li {
 	list-style: none;
 }

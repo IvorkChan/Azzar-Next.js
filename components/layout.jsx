@@ -18,22 +18,22 @@ export default function Layout({ children, home }) {
 				<div className={styles.menu}>
 					<li className={styles.menuTag}>
 						<Link href='/' aria-label='home'>
-							azzar
+							Ivork
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
 						<Link href='/info' aria-label='info'>
-							info
+							Info
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
 						<Link href='/blog' aria-label='blog'>
-							blog
+							Blog
 						</Link>
 					</li>
 					<li className={styles.menuTag}>
 						<Link href='/list' aria-label='list'>
-							list
+							List
 						</Link>
 					</li>
 				</div>

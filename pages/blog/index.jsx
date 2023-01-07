@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/layout';
-import styles from '../styles/main.module.scss';
+import Layout from '../../components/layout';
+import styles from '../../styles/main.module.scss';
 
 export const pageTitle = 'blog';
 
-import { getSortedBlogData } from '../lib/post-blog';
-import Date from '../components/date';
+import { getSortedBlogData } from '../../lib/post-blog';
+import Date from '../../components/date';
 
 export default function Home({ allBlogData }) {
 	return (
